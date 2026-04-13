@@ -1,0 +1,177 @@
+/* ═══════════════════════════════════════
+   COMPONENTS.CSS — Buttons, Cards, Stats, Badges, Cursor
+═══════════════════════════════════════ */
+
+/* ── CUSTOM CURSOR ── */
+#cursor{
+  position:fixed;z-index:9999;pointer-events:none;
+  width:12px;height:12px;
+  background:var(--gold2);border-radius:50%;
+  transform:translate(-50%,-50%);
+  transition:width 0.15s,height 0.15s,background 0.15s;
+  mix-blend-mode:screen;
+}
+#cursor-ring{
+  position:fixed;z-index:9998;pointer-events:none;
+  width:32px;height:32px;
+  border:1px solid rgba(201,168,76,0.5);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  transition:width 0.2s,height 0.2s;
+}
+
+/* ── BUTTONS ── */
+.btn{
+  font-family:var(--font-heading);font-size:0.7rem;letter-spacing:3px;
+  text-transform:uppercase;padding:13px 32px;border-radius:2px;
+  cursor:none;position:relative;overflow:hidden;
+  transition:all 0.3s;border:none;
+}
+.btn::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,0.1),transparent);
+  opacity:0;transition:opacity 0.3s;
+}
+.btn:hover::before{opacity:1}
+
+.btn-red{
+  background:linear-gradient(135deg,var(--red) 0%,#7A0000 100%);
+  color:var(--cream);
+  box-shadow:0 0 20px rgba(192,39,45,0.5),0 4px 15px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.12);
+}
+.btn-red:hover{
+  box-shadow:0 0 40px rgba(232,52,59,0.9),0 0 80px rgba(192,39,45,0.5),0 8px 25px rgba(0,0,0,0.4);
+  transform:translateY(-2px);color:#fff;
+}
+.btn-gold{
+  background:transparent;color:var(--gold2);border:1px solid var(--gold);
+  box-shadow:0 0 15px rgba(201,168,76,0.2),inset 0 0 15px rgba(201,168,76,0.05);
+}
+.btn-gold:hover{
+  background:rgba(201,168,76,0.08);
+  box-shadow:0 0 30px rgba(201,168,76,0.5),0 0 60px rgba(201,168,76,0.2);
+  color:var(--gold3);transform:translateY(-2px);border-color:var(--gold2);
+}
+.btn-teal{
+  background:transparent;color:var(--teal2);
+  border:1px solid rgba(13,155,138,0.5);
+  box-shadow:0 0 12px rgba(13,155,138,0.15);
+}
+.btn-teal:hover{
+  background:rgba(13,155,138,0.08);
+  box-shadow:0 0 30px rgba(20,196,175,0.5),0 0 60px rgba(13,155,138,0.2);
+  color:var(--teal3);transform:translateY(-2px);border-color:var(--teal2);
+}
+.btn-ghost{
+  background:transparent;color:rgba(200,169,110,0.6);
+  border:1px solid rgba(200,169,110,0.15);
+}
+.btn-ghost:hover{color:var(--cream);border-color:rgba(200,169,110,0.4);transform:translateY(-1px)}
+
+.btn-discord{
+  font-family:var(--font-heading);font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;
+  padding:13px 36px;border-radius:2px;cursor:none;border:none;
+  background:linear-gradient(135deg,#5865F2,#3A45CC);color:#fff;
+  box-shadow:0 0 20px rgba(88,101,242,0.4),0 4px 15px rgba(0,0,0,0.4);
+  transition:all 0.3s;
+}
+.btn-discord:hover{
+  box-shadow:0 0 40px rgba(88,101,242,0.8),0 0 80px rgba(88,101,242,0.4),0 8px 25px rgba(0,0,0,0.4);
+  transform:translateY(-2px);
+}
+
+/* ── STAT CARDS ── */
+.stats-row{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:rgba(201,168,76,0.08);
+  border:1px solid rgba(201,168,76,0.12);
+  margin-bottom:4rem;overflow:hidden;border-radius:2px;
+}
+.stat-block{
+  background:linear-gradient(135deg,var(--navy3) 0%,var(--navy4) 100%);
+  padding:2rem 1.5rem;text-align:center;
+  position:relative;overflow:hidden;transition:background 0.3s;
+}
+.stat-block::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:0;transition:opacity 0.3s;
+}
+.stat-block:hover{background:linear-gradient(135deg,var(--navy4) 0%,var(--navy5) 100%)}
+.stat-block:hover::before{opacity:1}
+.stat-num{
+  font-family:var(--font-display);font-size:2.2rem;line-height:1;display:block;
+  background:linear-gradient(180deg,var(--gold3),var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:0.4rem;
+}
+.stat-label{
+  font-family:var(--font-heading);font-size:0.58rem;letter-spacing:3px;
+  text-transform:uppercase;color:var(--cream3);
+}
+
+/* ── GLASS CARDS ── */
+.glass-card{
+  background:linear-gradient(135deg,rgba(12,20,40,0.9) 0%,rgba(17,30,56,0.8) 100%);
+  border:1px solid rgba(201,168,76,0.12);border-radius:3px;padding:2rem;
+  position:relative;overflow:hidden;
+  transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;
+  backdrop-filter:blur(8px);
+}
+.glass-card::after{
+  content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(201,168,76,0.04),transparent);
+  transition:left 0.6s;
+}
+.glass-card:hover::after{left:140%}
+.glass-card:hover{
+  border-color:rgba(201,168,76,0.25);transform:translateY(-3px);
+  box-shadow:0 12px 40px rgba(0,0,0,0.4),0 0 30px rgba(201,168,76,0.08);
+}
+.card-label{
+  font-family:var(--font-heading);font-size:0.65rem;letter-spacing:3px;
+  text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;
+  display:flex;align-items:center;gap:0.5rem;
+}
+.card-label::before{content:'⚓';font-size:0.7rem;color:var(--red2)}
+.glass-card p{font-size:1rem;line-height:1.75;color:rgba(240,230,204,0.85)}
+
+/* ── CREED BANNER ── */
+.creed-banner{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,rgba(192,39,45,0.12) 0%,rgba(7,13,26,0.95) 40%,rgba(201,168,76,0.08) 100%);
+  border:1px solid rgba(192,39,45,0.3);border-radius:3px;
+  padding:3rem 2.5rem;text-align:center;margin:2.5rem 0;
+}
+.creed-banner::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 80% at 50% 50%,rgba(201,168,76,0.04) 0%,transparent 70%);
+}
+.creed-quote{
+  font-family:var(--font-display);font-size:clamp(1.2rem,3vw,1.8rem);
+  color:var(--gold2);line-height:1.4;margin-bottom:1rem;position:relative;
+}
+.creed-cite{
+  font-family:var(--font-heading);font-size:0.65rem;letter-spacing:4px;
+  text-transform:uppercase;color:var(--cream3);position:relative;
+}
+
+/* ── BADGES (hero) ── */
+.hero-badges{display:flex;justify-content:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:3rem}
+.hbadge{
+  font-family:var(--font-heading);font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;
+  padding:5px 16px;border-radius:1px;border:1px solid;backdrop-filter:blur(4px);
+}
+.hbadge-server{border-color:rgba(201,168,76,0.4);color:var(--gold2);background:rgba(201,168,76,0.06)}
+.hbadge-type{border-color:rgba(192,39,45,0.5);color:var(--red3);background:rgba(192,39,45,0.07)}
+.hbadge-content{border-color:rgba(13,155,138,0.4);color:var(--teal2);background:rgba(13,155,138,0.06)}
+
+/* ── DISCORD CTA BOX ── */
+.discord-cta{
+  text-align:center;margin:3rem 0 1rem;padding:3rem;
+  background:linear-gradient(135deg,rgba(88,101,242,0.08),rgba(7,13,26,0.95),rgba(201,168,76,0.04));
+  border:1px solid rgba(88,101,242,0.2);border-radius:3px;
+  box-shadow:0 0 40px rgba(88,101,242,0.06);
+}
+.discord-cta h3{font-family:var(--font-display);font-size:1.5rem;color:var(--cream);margin-bottom:0.75rem}
+.discord-cta p{color:var(--cream3);margin-bottom:1.75rem;font-size:1rem;line-height:1.6;max-width:500px;margin-left:auto;margin-right:auto}

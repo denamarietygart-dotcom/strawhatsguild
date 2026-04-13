@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The Straw Hats — Thunderlord US</title>
+<link rel="icon" href="assets/images/favicon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- OCEAN BACKGROUND -->
+  <div id="ocean-bg">
+    <div class="ocean-base"></div>
+    <div class="ocean-shimmer"></div>
+    <svg class="wave-layer wave1" viewBox="0 0 1440 180" preserveAspectRatio="none">
+      <path fill="rgba(13,155,138,1)" d="M0,90 C180,140 360,40 540,90 C720,140 900,30 1080,80 C1260,130 1380,60 1440,90 L1440,180 L0,180 Z"/>
+    </svg>
+    <svg class="wave-layer wave2" viewBox="0 0 1440 140" preserveAspectRatio="none">
+      <path fill="rgba(192,39,45,1)" d="M0,50 C200,100 400,20 600,60 C800,100 1000,20 1200,55 C1360,80 1420,40 1440,50 L1440,140 L0,140 Z"/>
+    </svg>
+    <svg class="wave-layer wave3" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path fill="rgba(201,168,76,1)" d="M0,30 C240,70 480,10 720,40 C960,70 1200,15 1440,35 L1440,100 L0,100 Z"/>
+    </svg>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="skull">☠</span>
+        The Straw Hats
+      </div>
+      <div class="nav-links">
+        <button class="active" onclick="show('hero',this)">Home</button>
+        <button onclick="show('about',this)">About</button>
+        <button onclick="show('leadership',this)">Officers</button>
+        <button onclick="show('schedule',this)">Schedule</button>
+        <button onclick="show('recruit',this)">Join</button>
+        <button onclick="show('resources',this)">Resources</button>
+        <button onclick="show('streamers',this)">Streamers</button>
+        <button onclick="show('raffle',this)">Raffle</button>
+        <button class="nav-discord" onclick="openLink('https://discord.gg/akuH6jMkbQ')">⚓ Discord</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTIONS -->
+  <div id="sections-wrapper">
+
+    <!-- HERO -->
+    <section id="hero" class="page-section active">
+      <div class="hero-vignette"></div>
+      <div class="hero-top-line">World of Warcraft · Thunderlord US · Alliance</div>
+      <div class="hero-skull-wrap"><span class="hero-skull">☠</span></div>
+      <div class="hero-title">THE STRAW HATS</div>
+      <div class="hero-sub">Thunderlord — US · Alliance Guild</div>
+      <div class="hero-tagline">"A chill, friendly crew sailing every sea of Azeroth — from the depths of Mythic+ to the chaos of Rated Battlegrounds."</div>
+      <div class="hero-badges">
+        <span class="hbadge hbadge-server">⚓ Thunderlord US</span>
+        <span class="hbadge hbadge-type">All Playstyles Welcome</span>
+        <span class="hbadge hbadge-content">Raids · M+ · RBGs · Casual</span>
+      </div>
+      <div class="hero-cta">
+        <button class="btn btn-red" onclick="openLink('https://discord.gg/akuH6jMkbQ')">⚓ Join Discord</button>
+        <button class="btn btn-gold" onclick="show('recruit',document.querySelectorAll('.nav-links button')[4])">Apply to Crew</button>
+        <button class="btn btn-ghost" onclick="show('about',document.querySelectorAll('.nav-links button')[1])">Learn More</button>
+      </div>
+      <div class="scroll-hint"><div class="scroll-arrow"></div>Scroll to Explore</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page-section">
+      <div class="section-eyebrow">Who We Are</div>
+      <div class="section-title">The Straw Hat Pirates</div>
+      <div class="section-rule"></div>
+
+      <div class="stats-row">
+        <div class="stat-block"><span class="stat-num">6/6</span><span class="stat-label">N Dreamrift</span></div>
+        <div class="stat-block"><span class="stat-num">3/6</span><span class="stat-label">N Voidspire</span></div>
+        <div class="stat-block"><span class="stat-num">235+</span><span class="stat-label">iLvl Minimum</span></div>
+        <div class="stat-block"><span class="stat-num">∞</span><span class="stat-label">Adventures Ahead</span></div>
+      </div>
+
+      <div class="three-col">
+        <div class="glass-card">
+          <div class="card-label">Who We Are</div>
+          <p>The Straw Hats are a chill, friendly guild on Thunderlord focused on running Mythics, BGs, and Raids while keeping the vibes relaxed. Whether you're here to push content, returning to WoW after years away, or just want to hang out with good people — you'll fit right in.</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-label">Our Philosophy</div>
+          <p>We're here to vibe, have fun, and enjoy the game together. Every playstyle has a home on this ship. Treat your crewmates with respect, show up prepared, help when you can, and always come ready for the next adventure. Nakama above all.</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-label">What We Do</div>
+          <p>Weekly Normal and Heroic raid progression, organized Mythic+ key pushing, guild RBGs building conquest for arena teams, housing events, and regular social nights. Active Discord keeps every piece of the crew connected.</p>
+        </div>
+      </div>
+
+      <div class="creed-banner">
+        <div class="creed-quote">"Help each other out. We grow as a crew."</div>
+        <div class="creed-cite">— The Straw Hat Code · Rule IV</div>
+      </div>
+
+      <div class="ornament-divider">⚓ The Code ⚓</div>
+
+      <div class="rules-grid">
+        <div class="rule-item"><span class="rule-n">01</span><span class="rule-t">Be kind and chill. We're here to vibe, have fun, and enjoy the game. Treat everyone with respect.</span></div>
+        <div class="rule-item"><span class="rule-n">02</span><span class="rule-t">No drama. Take a breath, relax, and keep the guild a positive place for everyone.</span></div>
+        <div class="rule-item"><span class="rule-n">03</span><span class="rule-t">No advertising other guilds. Recruiting for other guilds in chat is not allowed.</span></div>
+        <div class="rule-item"><span class="rule-n">04</span><span class="rule-t">Help each other out. If someone needs advice, a dungeon run, or help with quests — lend a hand. We grow as a crew.</span></div>
+        <div class="rule-item"><span class="rule-n">05</span><span class="rule-t">No toxic behavior. No harassment, raging, griefing, or putting others down. Period.</span></div>
+        <div class="rule-item"><span class="rule-n">06</span><span class="rule-t">Keep guild chat clean-ish. Jokes and fun are welcome — just don't cross lines or make others uncomfortable.</span></div>
+        <div class="rule-item"><span class="rule-n">07</span><span class="rule-t">Show up for events you sign up for. If you can't make it, just let an officer know.</span></div>
+        <div class="rule-item"><span class="rule-n">08</span><span class="rule-t">No politics or religion discussions in guild chat or during events. Keep it about Azeroth.</span></div>
+        <div class="rule-item"><span class="rule-n">09</span><span class="rule-t">Respect officer calls during raids and group content. We're all here to succeed together.</span></div>
+        <div class="rule-item"><span class="rule-n">10</span><span class="rule-t">Most important: have fun, vibe, and enjoy the game with the Straw Hats. 🏴‍☠️</span></div>
+      </div>
+
+      <div class="discord-cta">
+        <h3>Ready to Set Sail?</h3>
+        <p>Join our Discord to connect with the crew, sign up for events, and find your place on the ship.</p>
+        <button class="btn-discord" onclick="openLink('https://discord.gg/akuH6jMkbQ')">Join the Discord Server</button>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="page-section">
+      <div class="section-eyebrow">The Officers</div>
+      <div class="section-title">Guild Leadership</div>
+      <div class="section-rule"></div>
+
+      <div class="captain-wrap">
+        <div class="captain-card">
+          <span class="capt-icon">👑</span>
+          <div class="capt-rank">Pirate King</div>
+          <div class="capt-name">Kush Zombie</div>
+          <div class="capt-sub">Protection Paladin · Guild Master</div>
+        </div>
+      </div>
+
+      <div class="ornament-divider">⚓ Pirate Emperors ⚓</div>
+
+      <div class="officers-grid">
+        <div class="officer-card">
+          <span class="off-icon">⚔️</span>
+          <div class="off-rank">Raid Lead · Pirate Emperor</div>
+          <div class="off-name">Niari</div>
+          <div class="off-char">deaniebeanie</div>
+        </div>
+        <div class="officer-card">
+          <span class="off-icon">🗡️</span>
+          <div class="off-rank">Raid Lead · Pirate Emperor</div>
+          <div class="off-name">Tenfists</div>
+          <div class="off-char">nmo10</div>
+        </div>
+        <div class="officer-card">
+          <span class="off-icon">🛡️</span>
+          <div class="off-rank">Main Tank · Officer</div>
+          <div class="off-name">Shareyne</div>
+          <div class="off-char">Nimfus</div>
+        </div>
+        <div class="officer-card">
+          <span class="off-icon">🛡️</span>
+          <div class="off-rank">Main Tank · Officer</div>
+          <div class="off-name">Hawtuahs</div>
+          <div class="off-char">Hawtuahs</div>
+        </div>
+        <div class="officer-card">
+          <span class="off-icon">⚡</span>
+          <div class="off-rank">PvP Lead · Officer</div>
+          <div class="off-name">Julie</div>
+          <div class="off-char">PvP Lead · RBG Organizer</div>
+        </div>
+      </div>
+
+      <div class="discord-cta">
+        <h3>Want to Reach the Officers?</h3>
+        <p>Find them in the Discord server — always around to answer questions and get you into content.</p>
+        <button class="btn-discord" onclick="openLink('https://discord.gg/akuH6jMkbQ')">Open Discord</button>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="schedule" class="page-section">
+      <div class="section-eyebrow">Weekly Events</div>
+      <div class="section-title">Voyage Log</div>
+      <div class="section-rule"></div>
+
+      <div class="schedule-wrap">
+        <div class="sched-row raid-row">
+          <div><div class="sched-day">Saturday</div><div class="sched-time">8:00 PM EST</div></div>
+          <div><div class="sched-title">Progression Raid — Night 1</div><div class="sched-desc">Current tier Normal/Heroic. Dreamrift + Voidspire. 235+ iLvl required.</div></div>
+          <span class="sbadge sb-raid">Raid</span>
+        </div>
+        <div class="sched-row raid-row">
+          <div><div class="sched-day">Sunday</div><div class="sched-time">7:00 PM EST</div></div>
+          <div><div class="sched-title">Progression Raid — Night 2</div><div class="sched-desc">Continuation of weekly prog. Vaelgor &amp; Ezzorak focus. Study strats beforehand.</div></div>
+          <span class="sbadge sb-raid">Raid</span>
+        </div>
+        <div class="sched-row pvp-row">
+          <div><div class="sched-day">Weekly</div><div class="sched-time">Sign up in Discord</div></div>
+          <div><div class="sched-title">Guild RBGs — Rated Battlegrounds</div><div class="sched-desc">10-man, no flex. Contact Julie for invites. Building conquest for Arena teams.</div></div>
+          <span class="sbadge sb-pvp">PvP</span>
+        </div>
+        <div class="sched-row mythic-row">
+          <div><div class="sched-day">Ongoing</div><div class="sched-time">#mythic-keys</div></div>
+          <div><div class="sched-title">Mythic+ Push Groups</div><div class="sched-desc">Organize runs via Discord signup in #mythic-keys. 3+ guildies earns raffle entries.</div></div>
+          <span class="sbadge sb-mythic">M+</span>
+        </div>
+        <div class="sched-row">
+          <div><div class="sched-day">Ongoing</div><div class="sched-time">Casual</div></div>
+          <div><div class="sched-title">Housing, Delves &amp; Open World</div><div class="sched-desc">Casual content, leveling alts, achievement hunting, and hanging out in Azeroth.</div></div>
+          <span class="sbadge sb-social">Casual</span>
+        </div>
+      </div>
+
+      <div class="prog-block">
+        <div class="prog-label">Current Progression — The War Within</div>
+        <div class="boss-grid">
+          <div class="boss-pill"><div class="boss-name">Dreamrift Normal</div><span class="boss-tag b-kill">6/6 Cleared ✓</span></div>
+          <div class="boss-pill"><div class="boss-name">Voidspire Normal</div><span class="boss-tag b-prog">3/6 In Progress</span></div>
+          <div class="boss-pill"><div class="boss-name">Vaelgor</div><span class="boss-tag b-prog">In Progress</span></div>
+          <div class="boss-pill"><div class="boss-name">Ezzorak</div><span class="boss-tag b-prog">In Progress</span></div>
+          <div class="boss-pill"><div class="boss-name">Heroic Tier</div><span class="boss-tag b-lock">Coming Soon</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECRUIT -->
+    <section id="recruit" class="page-section">
+      <div class="section-eyebrow">Come Sail With Us</div>
+      <div class="section-title">Join the Crew</div>
+      <div class="section-rule"></div>
+
+      <div class="recruit-banner">
+        <span class="r-icon">⚓</span>
+        <div>
+          <div class="recruit-title">Recruiting Now</div>
+          <p>The Straw Hats are always looking for the right crew. All playstyles welcome — if you've got good vibes and respect the code, you belong on this ship.</p>
+        </div>
+      </div>
+
+      <div class="needs-grid">
+        <div class="need-card"><span class="need-icon">🛡</span><div class="need-name">Tank</div><div class="need-spec">All tank specs</div><span class="priority p-high">High Need</span></div>
+        <div class="need-card"><span class="need-icon">💚</span><div class="need-name">Healer</div><div class="need-spec">All healer specs</div><span class="priority p-high">High Need</span></div>
+        <div class="need-card"><span class="need-icon">⚔️</span><div class="need-name">Melee DPS</div><div class="need-spec">All melee specs</div><span class="priority p-med">Moderate</span></div>
+        <div class="need-card"><span class="need-icon">🔥</span><div class="need-name">Ranged DPS</div><div class="need-spec">All ranged specs</div><span class="priority p-med">Moderate</span></div>
+        <div class="need-card"><span class="need-icon">⚓</span><div class="need-name">Casual / Social</div><div class="need-spec">Any role, any level</div><span class="priority p-open">Always Open</span></div>
+      </div>
+
+      <div class="req-card">
+        <h3>What We Look For</h3>
+        <ul class="req-list">
+          <li>235+ item level minimum for raid nights — survivability, not gatekeeping</li>
+          <li>Know your class rotation — come prepared, we trust you</li>
+          <li>Study boss mechanics before progression — Mythic Trap is guild-recommended</li>
+          <li>Show up for events you sign up for, or give an officer a heads up</li>
+          <li>Good attitude, positive energy, team-first mentality</li>
+          <li>Active in Discord — that's where everything lives</li>
+          <li>Casual players don't need raid requirements — all playstyles welcome</li>
+        </ul>
+      </div>
+
+      <div class="discord-cta">
+        <h3>Ready to Apply?</h3>
+        <p>Jump into Discord and introduce yourself. An officer will get you sorted and sailing in no time.</p>
+        <button class="btn-discord" onclick="openLink('https://discord.gg/akuH6jMkbQ')">⚓ Join Discord &amp; Apply</button>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources" class="page-section">
+      <div class="section-eyebrow">Tools of the Trade</div>
+      <div class="section-title">Navigator's Chart</div>
+      <div class="section-rule"></div>
+
+      <div class="res-category">
+        <div class="res-cat-title"><span class="icon">🎯</span> Raid Preparation</div>
+        <div class="res-grid">
+          <a class="res-link" onclick="openLink('https://www.mythictrap.com/en')"><span class="res-icon">🎯</span><div><strong>Mythic Trap</strong><span>Guild-recommended boss guides &amp; vids by role</span></div></a>
+          <a class="res-link" onclick="openLink('https://www.warcraftlogs.com/')"><span class="res-icon">📈</span><div><strong>Warcraft Logs</strong><span>Parse your performance</span></div></a>
+          <a class="res-link" onclick="openLink('https://www.wipefest.gg/')"><span class="res-icon">🔍</span><div><strong>Wipefest</strong><span>Analyze wipes and deaths</span></div></a>
+          <a class="res-link" onclick="openLink('https://www.method.gg/guides')"><span class="res-icon">⚔️</span><div><strong>Method Guides</strong><span>World-first level strategies</span></div></a>
+        </div>
+      </div>
+
+      <div class="res-category">
+        <div class="res-cat-title"><span class="icon">📖</span> Class &amp; Builds</div>
+        <div class="res-grid">
+          <a class="res-link" onclick="openLink('https://www.icy-veins.com/wow/')"><span class="res-icon">❄️</span><div><strong>Icy Veins</strong><span>Rotation, talents &amp; gearing</span></div></a>
+          <a class="res-link" onclick="openLink('https://www.raidbots.com/')"><span class="res-icon">🤖</span><div><strong>Raidbots</strong><span>Sim your character &amp; gear</span></div></a>
+          <a class="res-link" onclick="openLink('https://www.archon.gg/wow')"><span class="res-icon">📊</span><div><strong>Archon.gg</strong><span>Top player build data</span></div></a>
+          <a class="res-link" onclick="openLink('https://weakauras.online/')"><span class="res-icon">⚡</span><div><strong>WeakAuras</strong><span>Import essential auras</span></div></a>
+        </div>
+      </div>
+
+      <div class="res-category">
+        <div class="res-cat-title"><span class="icon">🔑</span> Mythic+</div>
+        <div class="res-grid">
+          <a class="res-link" onclick="openLink('https://raider.io')"><span class="res-icon">🏆</span><div><strong>Raider.IO</strong><span>M+ scores &amp; rankings</span></div></a>
+          <a class="res-link" onclick="openLink('https://www.keystone.guru/')"><span class="res-icon">🗺️</span><div><strong>Keystone.guru</strong><span>Dungeon route planning</span></div></a>
+          <a class="res-link" onclick="openLink('https://www.wowhead.com/mythic-keystones-and-dungeons-guide')"><span class="res-icon">🔑</span><div><strong>Wowhead M+</strong><span>Dungeon strats &amp; routes</span></div></a>
+        </div>
+      </div>
+
+      <div class="res-category">
+        <div class="res-cat-title"><span class="icon">⚡</span> PvP</div>
+        <div class="res-grid">
+          <a class="res-link" onclick="openLink('https://www.wowhead.com/pvp-guide')"><span class="res-icon">⚡</span><div><strong>Wowhead PvP</strong><span>Rated BG &amp; arena guides</span></div></a>
+          <a class="res-link" onclick="openLink('https://www.skill-capped.com/wow/')"><span class="res-icon">🎮</span><div><strong>Skill Capped</strong><span>PvP coaching content</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STREAMERS -->
+    <section id="streamers" class="page-section">
+      <div class="section-eyebrow">The Crew Goes Live</div>
+      <div class="section-title">Guild Streamers</div>
+      <div class="section-rule"></div>
+
+      <p class="streamers-intro">Some of our crew takes the adventure to Twitch — come watch, hang out, and support your fellow Straw Hats. Want to be added here? Drop your Twitch link in Discord!</p>
+
+      <div class="streamer-grid">
+        <div class="streamer-card">
+          <div class="streamer-preview">🏴‍☠️</div>
+          <div class="streamer-body">
+            <div class="streamer-name">Kush Zombie</div>
+            <div class="streamer-desc">Guild Master · Prot Paladin · Raids &amp; M+</div>
+            <div class="streamer-tags"><span class="stag">Paladin</span><span class="stag">Raiding</span><span class="stag">M+</span></div>
+            <button class="btn btn-gold" onclick="openLink('https://discord.gg/akuH6jMkbQ')">Find on Discord</button>
+          </div>
+        </div>
+        <div class="streamer-card">
+          <div class="streamer-preview">⚔️</div>
+          <div class="streamer-body">
+            <div class="streamer-name">Your Channel Here</div>
+            <div class="streamer-desc">Drop your Twitch link in #general to be featured!</div>
+            <div class="streamer-tags"><span class="stag">Add Yours</span></div>
+            <button class="btn btn-teal" onclick="openLink('https://discord.gg/akuH6jMkbQ')">Submit to Discord</button>
+          </div>
+        </div>
+        <div class="streamer-card">
+          <div class="streamer-preview">🌊</div>
+          <div class="streamer-body">
+            <div class="streamer-name">Another Pirate</div>
+            <div class="streamer-desc">Crew members can be added here — just ask an officer!</div>
+            <div class="streamer-tags"><span class="stag">Guild Crew</span></div>
+            <button class="btn btn-ghost" onclick="openLink('https://discord.gg/akuH6jMkbQ')">Join Discord</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RAFFLE -->
+    <section id="raffle" class="page-section">
+      <div class="section-eyebrow">Active Event</div>
+      <div class="section-title">Guild Raffle</div>
+      <div class="section-rule"></div>
+
+      <div class="raffle-hero">
+        <h2>🎰 Guild Raffle — Active Now!</h2>
+        <p>Running March 29 – April 30. Donate to the guild bank or get nominated by crewmates to earn entries. Three winners each pick from: a Mount of choice, a WoW Housing Decor Pack, or 200,000 Gold.</p>
+      </div>
+
+      <div class="raffle-grid">
+        <div class="raffle-card">
+          <h4>Guild Bank Donations</h4>
+          <div class="erow"><span>10,000 Gold</span><span class="erow-pts">5 entries</span></div>
+          <div class="erow"><span>10x Flask stack</span><span class="erow-pts">3 entries</span></div>
+          <div class="erow"><span>10x Potion stack</span><span class="erow-pts">3 entries</span></div>
+          <div class="erow"><span>10x Hearty Food stack</span><span class="erow-pts">3 entries</span></div>
+          <div class="erow"><span>100x Crafting materials</span><span class="erow-pts">3 entries</span></div>
+        </div>
+        <div class="raffle-card">
+          <h4>Nominations (#guild-raffle)</h4>
+          <div class="erow"><span>Crafted / Recrafted gear</span><span class="erow-pts">1 entry</span></div>
+          <div class="erow"><span>Ran BGs / Arenas together</span><span class="erow-pts">1 entry</span></div>
+          <div class="erow"><span>Helped level in dungeons</span><span class="erow-pts">1 entry</span></div>
+          <div class="erow"><span>Gave class advice</span><span class="erow-pts">1 entry</span></div>
+          <div class="erow"><span>Full Raid Night Attendance</span><span class="erow-pts">5 entries</span></div>
+          <div class="erow"><span>Full RBG Night Attendance</span><span class="erow-pts">5 entries</span></div>
+          <div class="erow"><span>Updated Discord name</span><span class="erow-pts">2 entries</span></div>
+          <div class="erow"><span>Updated alt guild notes</span><span class="erow-pts">2 entries/alt</span></div>
+        </div>
+        <div class="raffle-card">
+          <h4>M+ Participation</h4>
+          <div class="erow"><span>Started guild M+ group via Discord signup (3+ people)</span><span class="erow-pts">1/person</span></div>
+        </div>
+        <div class="raffle-card">
+          <h4>Prizes</h4>
+          <div class="erow"><span>Mount of choice (in-game store)</span><span class="erow-pts">Winner picks</span></div>
+          <div class="erow"><span>WoW Housing Decor Pack</span><span class="erow-pts">Winner picks</span></div>
+          <div class="erow"><span>200,000 Gold</span><span class="erow-pts">Winner picks</span></div>
+          <div class="erow"><span>Most nominations bonus</span><span class="erow-pts">10,000 Gold</span></div>
+        </div>
+      </div>
+      <p class="raffle-note">Nominate by mains only. Officers not eligible. Post in #guild-raffle on Discord.</p>
+    </section>
+
+  </div><!-- /sections-wrapper -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-skull">☠</span>
+      <div class="footer-name">The Straw Hats</div>
+      <div class="footer-meta">Thunderlord — US · Alliance · World of Warcraft</div>
+      <div class="footer-links">
+        <button class="btn btn-gold" onclick="openLink('https://discord.gg/akuH6jMkbQ')">Discord</button>
+        <button class="btn btn-ghost" onclick="show('recruit',document.querySelectorAll('.nav-links button')[4])">Apply</button>
+        <button class="btn btn-ghost" onclick="show('resources',document.querySelectorAll('.nav-links button')[5])">Resources</button>
+      </div>
+      <div class="footer-copy">Fan site · Not affiliated with Blizzard Entertainment · © 2026 The Straw Hats Guild</div>
+    </div>
+  </footer>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/nav.js"></script>
+
+</body>
+</html>

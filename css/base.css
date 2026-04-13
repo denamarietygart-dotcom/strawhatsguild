@@ -1,0 +1,55 @@
+/* ═══════════════════════════════════════
+   BASE.CSS — Variables, Reset, Typography
+═══════════════════════════════════════ */
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  /* Brand Colors */
+  --red:#C0272D;
+  --red2:#E8343B;
+  --red3:#FF4D54;
+  --red-glow:rgba(232,52,59,0.35);
+
+  --gold:#C9A84C;
+  --gold2:#F0D080;
+  --gold3:#FFE4A0;
+  --gold-dark:#7A5A1A;
+
+  --navy:#04080F;
+  --navy2:#070D1A;
+  --navy3:#0C1428;
+  --navy4:#111E38;
+  --navy5:#162444;
+
+  --teal:#0D9B8A;
+  --teal2:#14C4AF;
+  --teal3:#1FFFF0;
+
+  --cream:#F0E6CC;
+  --cream2:#C8A96E;
+  --cream3:#8B6B3A;
+  --cream4:#3D2E18;
+
+  /* Fonts */
+  --font-display:'Cinzel Decorative', serif;
+  --font-heading:'Cinzel', serif;
+  --font-body:'Crimson Pro', Georgia, serif;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--navy);
+  color:var(--cream);
+  font-family:var(--font-body);
+  min-height:100vh;
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* Typography helpers */
+.font-display{ font-family:var(--font-display) }
+.font-heading{ font-family:var(--font-heading) }
+
+a{ text-decoration:none; color:inherit }
