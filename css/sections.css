@@ -131,6 +131,7 @@
 .officer-card:hover{border-color:rgba(201,168,76,0.3);transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.4),0 0 20px rgba(201,168,76,0.08)}
 .officer-card:hover::before{opacity:1}
 .off-icon{font-size:2rem;margin-bottom:0.75rem;display:block}
+.off-img{width:100%;height:180px;object-fit:cover;object-position:top;border-radius:2px;margin-bottom:1rem;display:block;}
 .off-rank{font-family:var(--font-heading);font-size:0.55rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.4rem}
 .off-name{font-family:var(--font-heading);font-size:1rem;color:var(--cream)}
 .off-char{font-size:0.82rem;color:var(--cream3);font-style:italic;margin-top:0.25rem}
